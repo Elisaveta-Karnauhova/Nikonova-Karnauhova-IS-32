@@ -13,3 +13,7 @@ def contact(request):
     return HttpResponseRedirect("/about")
 def details(request):
     return HttpResponsePermanentRedirect("/")
+def index(request):
+
+    
+    return render(request, "index.html")

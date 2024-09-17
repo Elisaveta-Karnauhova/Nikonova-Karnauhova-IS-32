@@ -1,9 +1,17 @@
-{% extends "firstapp/base.html" %}
-{% block title %}Index{% endblock title %}
-{% block header %}Главная страница{% endblock header %}
-{% block content%}
-<p>Категории продуктов</p>
-{% for i in cat %}
-    <li>{{ i }}</li>
- {% endfor %}
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Форма Django!</title>
+</head>
+<body>
+ <form method="POST">
+ {% csrf_token %}
+ <table>
+ {{ form }}
+ </table>
+ <input type="submit" value="Оправить" >
+6
+</form>
+</body>
+</html>
